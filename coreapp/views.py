@@ -10,4 +10,4 @@ class IndexView(ListView):
 class SingleView(DetailView):
     model = Core
     template_name = 'coreapp/single.html'
-    context_object_name = 'post'
+    context_object_name = 'comicbook'
