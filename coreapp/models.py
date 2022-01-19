@@ -17,7 +17,7 @@ class Core(models.Model):
     published_date = models.DateTimeField(default=timezone.now)
 
     def get_absolute_url(self):
-        return reverse('coreapp:inedex', args=[self.slug])
+        return reverse('coreapp:single', args=[self.slug])
 
     class Meta:
         ordering = ['-published_date']
