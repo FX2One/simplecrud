@@ -12,9 +12,9 @@ class Core(models.Model):
     snip = models.TextField(null=True)
     series = models.CharField(max_length=255)
     publishing = models.CharField(max_length=255)
-    sketcher = models.ForeignKey(User, on_delete=models.Cascade, related_name='coreapp')
+    sketcher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='coreapp')
     updated = models.DateTimeField(auto_now=True)
-    published_date = modles.DateTimeField(default=timezone.now)
+    published_date = models.DateTimeField(default=timezone.now)
 
     def get_absolute_url(self):
         return reverse('coreapp:inedex', args=[self.slug])
