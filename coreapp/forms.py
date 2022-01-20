@@ -4,4 +4,4 @@ from .models import Core
 class ComicsForm(forms.ModelForm):
     class Meta:
         model = Core
-        fields = '__all__'-
+        fields = '__all__'
