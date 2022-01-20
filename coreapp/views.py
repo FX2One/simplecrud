@@ -24,3 +24,17 @@ class AddView(CreateView):
     template_name = 'coreapp/add.html'
     context_object_name = 'add'
     success_url = reverse_lazy('coreapp:comics') #taking users back to comics crud view
+
+class EditView(UpdateView):
+    model = Core
+    fields = '__all__'
+    template_name = 'coreapp/edit.html'
+    pk_url_kwarg = 'pk' #<int:pk> passed over here
+    success_url = reverse_lazy('coreapp:comics')
+
+class Delete(DeleteView):
+    model = Core
+    fields = '__all__'
+    template_name = 'coreapp/delete.html'
+    pk_ulr_kwarg = 'pk'
+    success_url = reverse_lazy('coreapp:comics')
